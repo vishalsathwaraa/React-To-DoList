@@ -1,6 +1,6 @@
 import { gsap } from "gsap";
 import { useState, useEffect } from "react";
-import Form from './Form'
+import List from './List'
 
 function App() {
 
@@ -21,8 +21,9 @@ function App() {
   useEffect(() => {
     gsap.from('form', {
       opacity: 0,
-      left: -40,
-      duration: 1
+      y: 50,
+      delay:.3,
+      duration: 2
     })
   }, []);
 
@@ -30,18 +31,20 @@ function App() {
   const handleSubmit = (e) => {
 
     e.preventDefault();
+    if(input !=''){
     span.innerHTML = '<i class="fas fa-trash"></i>';
     li.innerText = input;
     li.appendChild(span)
     item.appendChild(li);
     setInput('');
-
+    }
+  
   }
 
   return (
 
     <div className="container">
-     <Form  input={input} setInput={setInput}  handleSubmit = { handleSubmit }/>
+     <List input={input} setInput={setInput}  handleSubmit = { handleSubmit }/>
     </div>
 //
   );

@@ -21,21 +21,20 @@
 
 .container form input {
   border: none;
-  margin-top: 20px;
   outline: none;
-  border-radius: 10px;
-  padding: 5px 20px;
+  width: 260px;
+  border-radius: 30px;
+  padding: 10px 30px;
   background: rgb(255, 255, 255);
 }
 
-form button {
-  border: none;
-  margin: 100px 0 0 10px;
+
+form i {
   outline: none;
   border-radius: 20px;
+  color: aqua;
   padding: 4px 15px;
-  font-size: 1rem;
-  background: rgb(12, 243, 50);
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -45,55 +44,62 @@ form input {
 
 form ul {
   list-style: none;
-  margin-top: -30px;
+  position: relative;
+  margin-top: 123px;
 }
 
 form ul li {
   position: relative;
-  margin-top: 10px;
+  letter-spacing: 2px;
+  margin-top: 35px;
   left: 5px;
+  font-size: 22px;
   animation: fade .4s ease-in-out;
   padding-bottom: 10px;
   text-transform: capitalize;
   color: aliceblue;
   border-bottom: 2px solid grey;
-  width: 200px;
+  width: 295px;
 }
 
 form ul li span {
   position: absolute;
-  right: 5px;
+  top: 2px;
+  right: -13px;
   cursor: pointer;
   color: aliceblue;
 }
 
-form ul li span i {
-  color: rgb(252, 86, 21);
-}
-
-@keyframes fade {
-  0% {
-
-    opacity: 0;
-    transform: scale(.3);
+  form ul li span i {
+    color: rgb(252, 86, 21);
+    font-size: 22px;
   }
 
-  100% {
+  @keyframes fade {
+    0% {
 
-    opacity: 1;
-    transform: scale(1);
+      opacity: 0;
+      transform: scale(.3);
+    }
+
+    100% {
+
+      opacity: 1;
+      transform: scale(1);
+    }
   }
-}
 
-h3 {
-  color: rgb(255, 255, 255);
-  text-align: center;
-  position: relative;
-  top: 30px;
-  left: -20px;
-}
+  h3 {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    position: relative;
+    top: 30px;
+    font-size: 2rem;
+    left: -20px;
+  }
 
-.input-add {
-  position: relative;
-  top: -36px;
-}
+  .input-add {
+    position: relative;
+    display: flex;
+    top: 80px;
+  }
