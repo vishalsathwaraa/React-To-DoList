@@ -1,105 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex !important;
+  justify-content: center;
+
 }
 
 .container {
-  background: black;
   display: flex;
-  justify-content: center;
-  width: 100%;
-  min-height: 100vh;
-  padding-bottom: 50px;
-
-}
-
-.container form input {
-  border: none;
-  outline: none;
-  width: 260px;
-  border-radius: 30px;
-  padding: 10px 30px;
+  flex-direction: column;
+  width: 400px !important;
+  position: relative;
+  margin-top: 60px;
   background: rgb(255, 255, 255);
+  align-items: center;
 }
 
-
-form i {
-  outline: none;
-  border-radius: 20px;
-  color: aqua;
-  padding: 4px 15px;
-  font-size: 2rem;
-  cursor: pointer;
-}
 
 form input {
-  color: rgb(0, 0, 0);
+  margin-right: 20px !important;
+  width: 300px;
 }
 
-form ul {
-  list-style: none;
-  position: relative;
-  margin-top: 123px;
-}
 
-form ul li {
+
+.todo-container {
+  display: flex;
+  width: 400px !important;
   position: relative;
-  letter-spacing: 2px;
-  margin-top: 35px;
-  left: 5px;
-  font-size: 22px;
+  align-items: center;
+  margin-top: 25px;
+  font-size: 1.8rem;
   animation: fade .4s ease-in-out;
-  padding-bottom: 10px;
+}
+
+.todo-container .text {
+  position: relative;
+  margin-left: 20px;
   text-transform: capitalize;
-  color: aliceblue;
-  border-bottom: 2px solid grey;
-  width: 295px;
+
 }
 
-form ul li span {
+.todo-container .close {
   position: absolute;
-  top: 2px;
-  right: -13px;
-  cursor: pointer;
-  color: aliceblue;
+  right: 20px;
+  font-size: 10px;
 }
 
-  form ul li span i {
-    color: rgb(252, 86, 21);
-    font-size: 22px;
-  }
 
-  @keyframes fade {
-    0% {
+.todo-container .checkbox {
+  position: absolute;
+  right: 120px;
+  font-size: 10px;
+}
 
-      opacity: 0;
-      transform: scale(.3);
-    }
+.todo-container .edit {
+  position: absolute;
+  right: 60px;
+  bottom: 0px;
+  font-size: 20px;
+}
 
-    100% {
+.todoid {
+  display: none;
+}
 
-      opacity: 1;
-      transform: scale(1);
-    }
-  }
 
-  h3 {
-    color: rgb(255, 255, 255);
-    text-align: center;
-    position: relative;
-    top: 30px;
-    font-size: 2rem;
-    left: -20px;
-  }
+.text {
+  color: black;
+}
 
-  .input-add {
-    position: relative;
+.icon {
+  cursor: pointer;
+}
+
+.btn {
+  display: flex;
+  width: -webkit-fill-available;
+  justify-content: space-between;
+  position: relative;
+  padding: 15px;
+  top: 40px;
+}
+
+
+.remove-all {
+
+  margin-left: 20px;
+
+}
+
+li {
+  font-size: 25px;
+  text-transform: capitalize;
+  position: relative;
+  top: 25px;
+  letter-spacing: 1px;
+  padding-top: 20px;
+}
+
+h4 {
+  color: black;
+}
+
+
+@media(max-width:576px) {
+
+  form {
     display: flex;
-    top: 80px;
+    flex-direction: column;
+    align-items: center;
   }
+
+  form button {
+    top: 10px;
+    position: relative;
+  }
+
+  .todo-container .checkbox {
+
+    right: 115px;
+    font-size: 10px;
+    top: 5px;
+  }
+
+  .todo-container .edit {
+    position: absolute;
+    right: 65px;
+    font-size: 18px;
+  }
+
+  .todo-container .close {
+
+    right: 28px;
+    font-size: 10px;
+  }
+
+  .todo-container {
+    display: flex;
+    width: 380px !important;
+    position: relative;
+    align-items: center;
+    margin-top: 35px;
+    font-size: 1.6rem;
+
+  }
+
+  .todo-container .text {
+    position: relative;
+    margin-left: 30px;
+    text-transform: capitalize;
+  }
+
+  li {
+    font-size: 20px;
+  }
+
+}
+
+
+
+
+@keyframes fade {
+  0% {
+    left: -100px;
+    transform: scale(.2);
+  }
+
+  100% {
+    left: 0px;
+    transform: scale(1);
+  }
+}
