@@ -1,28 +1,20 @@
-import { logDOM } from '@testing-library/dom';
-import React from 'react'
+import React from "react";
 
 const CompletedTodo = (props) => {
+  const { completed } = props;
+  console.log(completed);
 
-    const { completed } = props;
+  return (
+    <div className="completed-todo">
+      <ol>
+        {completed
+          .filter((val, index) => completed.indexOf(val) === index)
+          .map((val) => (
+            <li>{val}</li>
+          ))}
+      </ol>
+    </div>
+  );
+};
 
-
-
-    return (
-        <div>
-            <ol>
-
-                {completed.map((val) => {
-
-                    if (val !== '') {
-                        return <li>{val.list}</li>;
-                    }
-                }
-                  
-                )}
-             
-            </ol>
-        </div>
-    )
-}
-
-export default CompletedTodo
+export default CompletedTodo;

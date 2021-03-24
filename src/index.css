@@ -29,8 +29,19 @@ section {
 form input {
   margin-right: 20px !important;
   width: 300px;
+  background: #e8e8e8 !important;
+  padding: 8px 15px !important;
+  border: 1px solid rgba(29, 27, 27, 0.274) !important;
 }
 
+input:focus
+{
+  border: none !important;
+}
+
+input::placeholder{
+  color: rgba(0, 0, 0, 0.609) !important;
+}
 
 
 .todo-container {
@@ -38,14 +49,15 @@ form input {
   width: 400px !important;
   position: relative;
   align-items: center;
+  letter-spacing: 1px;
   margin-top: 25px;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   animation: fade .4s ease-in-out;
 }
 
 .todo-container .text {
   position: relative;
-  margin-left: 20px;
+  margin-left: 8px;
   text-transform: capitalize;
 
 }
@@ -84,23 +96,23 @@ form input {
 }
 
 .btn {
-  display: flex;
+
   width: -webkit-fill-available;
   justify-content: space-between;
   position: relative;
-  padding: 15px;
-  top: 40px;
+  padding: 10px 0 50px 0;
+  top: 30px;
 }
 
 
 .remove-all {
 
-  margin-left: 20px;
+  margin-right : 20px !important;
 
 }
 
 li {
-  font-size: 25px;
+  font-size: 22px;
   text-transform: capitalize;
   position: relative;
   top: 25px;
@@ -110,6 +122,13 @@ li {
 
 h4 {
   color: black;
+}
+
+.completed-todo{
+  position: relative;
+  right: 140px;
+  bottom: 12px;
+
 }
 
 
@@ -163,6 +182,10 @@ h4 {
 
   li {
     font-size: 20px;
+  }
+
+  .btn {
+    left: 25px;
   }
 
 }
