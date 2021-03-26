@@ -1,4 +1,3 @@
-import React from "react";
 import { Button, Header, Icon, Modal, Input } from "semantic-ui-react";
 
 const MapItems = (props) => {
@@ -7,7 +6,7 @@ const MapItems = (props) => {
     open,
     checkTodo,
     deleteTodo,
-    showTodo,
+    editTodo,
     newInput,
     handleNewInput,
     updateTodo,
@@ -17,6 +16,7 @@ const MapItems = (props) => {
   return (
     <div>
       {items.map((todo, index) => (
+        
         <div className="todo-container" key={index}>
           <div className="todoid">{(todo.id = index)}</div>
           <div
@@ -51,7 +51,7 @@ const MapItems = (props) => {
                 name="edit outline"
                 className="edit"
                 color="purple"
-                onClick={() => showTodo(todo.list, todo.id)}
+                onClick={() => editTodo(todo.list, todo.id)}
               />
             }
           >

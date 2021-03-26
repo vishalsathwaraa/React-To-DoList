@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 section {
@@ -12,7 +12,6 @@ section {
   min-height: 100vh;
   display: flex !important;
   justify-content: center;
-
 }
 
 .container {
@@ -21,28 +20,25 @@ section {
   width: 400px !important;
   position: relative;
   margin-top: 60px;
-  background: rgb(255, 255, 255);
+  background: rgba(231, 72, 72, 0);
   align-items: center;
 }
-
 
 form input {
   margin-right: 20px !important;
   width: 300px;
   background: #e8e8e8 !important;
   padding: 8px 15px !important;
-  border: 1px solid rgba(29, 27, 27, 0.274) !important;
+  border: 1px solid rgba(29, 27, 27, 0) !important;
 }
 
-input:focus
-{
+input:focus {
   border: none !important;
 }
 
-input::placeholder{
+input::placeholder {
   color: rgba(0, 0, 0, 0.609) !important;
 }
-
 
 .todo-container {
   display: flex;
@@ -52,14 +48,13 @@ input::placeholder{
   letter-spacing: 1px;
   margin-top: 25px;
   font-size: 1.5rem;
-  animation: fade .4s ease-in-out;
+  animation: fade 0.4s ease-in-out;
 }
 
 .todo-container .text {
   position: relative;
   margin-left: 8px;
   text-transform: capitalize;
-
 }
 
 .todo-container .close {
@@ -67,7 +62,6 @@ input::placeholder{
   right: 20px;
   font-size: 10px;
 }
-
 
 .todo-container .checkbox {
   position: absolute;
@@ -86,7 +80,6 @@ input::placeholder{
   display: none;
 }
 
-
 .text {
   color: black;
 }
@@ -96,19 +89,15 @@ input::placeholder{
 }
 
 .btn {
-
   width: -webkit-fill-available;
   justify-content: space-between;
   position: relative;
   padding: 10px 0 50px 0;
-  top: 30px;
+  top: 25px;
 }
 
-
 .remove-all {
-
-  margin-right : 20px !important;
-
+  margin-right: 20px !important;
 }
 
 li {
@@ -124,16 +113,45 @@ h4 {
   color: black;
 }
 
-.completed-todo{
+.completed {
+  width: 100%;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.completed-todo {
+  width: 300px;
+  top: 80px;
   position: relative;
-  right: 140px;
-  bottom: 12px;
+  padding: 30px;
+  background: rgb(255, 255, 255);
+  height: auto;
+}
+
+.completed-todo h2 {
+  font-size: 2.3rem;
+}
+
+.completed-todo ol li {
+  position: relative;
+  left: 30px;
+  top: -5px;
+
+}
+
+.completed-todo button {
+  position: relative;
+  width: 140px !important;
+  top: 20px;
 
 }
 
 
-@media(max-width:576px) {
 
+/*------------------------------- Media Query -------------------------------------*/
+
+
+@media (max-width: 576px) {
   form {
     display: flex;
     flex-direction: column;
@@ -146,7 +164,6 @@ h4 {
   }
 
   .todo-container .checkbox {
-
     right: 115px;
     font-size: 10px;
     top: 5px;
@@ -159,7 +176,6 @@ h4 {
   }
 
   .todo-container .close {
-
     right: 28px;
     font-size: 10px;
   }
@@ -171,7 +187,6 @@ h4 {
     align-items: center;
     margin-top: 35px;
     font-size: 1.6rem;
-
   }
 
   .todo-container .text {
@@ -188,15 +203,14 @@ h4 {
     left: 25px;
   }
 
+
+
 }
-
-
-
 
 @keyframes fade {
   0% {
     left: -100px;
-    transform: scale(.2);
+    transform: scale(0.2);
   }
 
   100% {
